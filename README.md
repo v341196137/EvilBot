@@ -4,6 +4,7 @@ The results of playing around with the Discord.py library for a bit of time. A l
 * Moderation bot
 * Host games
 ## TODO
+- [ ] Learn how to use embeds
 - [ ] Make tic tac toe playable
 - [ ] Make connect 4 playable
 - [ ] Make hangman's initiator not able to guess
