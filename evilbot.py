@@ -8,7 +8,6 @@
 import discord
 from discord.ext import commands, tasks
 from discord.utils import find
-import random
 import os
 from itertools import cycle
 import json
@@ -153,24 +152,6 @@ async def on_raw_reaction_remove(payload):
 @client.command() #these are stuff that get used with command prefix
 async def ping(ctx):#ctx = context? idk bro
     await ctx.send(f'Pong :P {round(client.latency * 1000)}ms') #sends :P to the channel, latency is how long it takes to send stuff
-
-@client.command(aliases = ['8ball', 'ball'])#this is list of all other commands that can be used to write this command
-async def _8ball(ctx, *,question):#because function can't start with 8, * allows to take in multiple params as one
-    responses = [
-        "Yes",
-        "No",
-        "I give up",
-        "Whatever math time",
-        "Idk",
-        "Maybe",
-        "Zzzz",
-        "42",
-        "Low batteeeeeeer- bleh XP",
-        "Error: Wifi connection unstable",
-        "404 answer not found",
-        ".....lagging"
-    ]
-    await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
 @client.command()
 @commands.has_permissions(manage_messages = True)#only works when user has permissions

@@ -35,14 +35,6 @@ class Test(commands.Cog):
     async def channel(self, ctx):
         await ctx.send("<#CHANNEL_ID>!")
 
-    @commands.command()
-    async def coin(self, ctx):
-        x = random.random()
-        if(x > 0.5):
-            await ctx.send("Tails")
-        else:
-            await ctx.send("Heads")
-
     @commands.command(aliases = ["picture", "pic"])
     async def gif(self, ctx):
         response = [
