@@ -2,7 +2,12 @@
 The results of playing around with the Discord.py library for a bit of time. A lot of commented out code probably only exists for reference because looking through the API is tiring. 
 ## Functions
 * Moderation bot
+  * Kick
+  * Ban
+  * Unban
 * Host games
+  * Hangman
+  * "Math"
 ## TODO
 - [ ] Organize to have a moderation cog instead of jamming everything there
 - [ ] Make math game have 10 rounds or something like that
