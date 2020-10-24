@@ -29,6 +29,7 @@ class Games(commands.Cog):
             if type(self.games[ctx.channel]) == Math.Math and (msg.isnumeric() or (msg[0] == '-' and (msg[1:].isnumeric()))):
                 if(self.games[ctx.channel].checkAnswer(int(msg))):
                     await ctx.channel.send(f"Good job! {ctx.author}")
+                    del self.games[ctx.channel]
 
     @commands.command(aliases = ["hm"])
     async def hangman(self, ctx):

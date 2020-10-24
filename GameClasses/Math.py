@@ -5,8 +5,8 @@
 import random
 class Math():
     def __init__(self):
-        self.n1 = random.randrange(100)
-        self.n2 = random.randrange(100)
+        self.n1 = random.randrange(-100, 100)
+        self.n2 = random.randrange(-100, 100)
         self.operator = None
         self.answer = None
         temp = random.random()
