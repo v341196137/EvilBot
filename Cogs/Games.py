@@ -14,18 +14,21 @@ class Games(commands.Cog):
     
     @commands.Cog.listener()
     async def on_message(self, ctx):
-        if len(ctx.content) == 1 and self.games[ctx.channel] is not None:
+        if self.games[ctx.channel] is not None:
             msg = ctx.content
-            if type(self.games[ctx.channel]) == Hangman.Hangman:
-                self.games[ctx.channel].guessLetter(msg)
-                await ctx.channel.send(self.games[ctx.channel].returnGuess())
-                if self.games[ctx.channel].checkWin():
-                    await ctx.channel.send("Good job!")
-                    del self.games[ctx.channel]
-                elif self.games[ctx.channel].checkLoss():
-                    await ctx.channel.send(":( y'all suck\nThe word/phrase was: " + self.games[ctx.channel].word)
-                    del self.games[ctx.channel]
-            
+            if len(msg) == 1:
+                if type(self.games[ctx.channel]) == Hangman.Hangman:
+                    self.games[ctx.channel].guessLetter(msg)
+                    await ctx.channel.send(self.games[ctx.channel].returnGuess())
+                    if self.games[ctx.channel].checkWin():
+                        await ctx.channel.send("Good job!")
+                        del self.games[ctx.channel]
+                    elif self.games[ctx.channel].checkLoss():
+                        await ctx.channel.send(":( y'all suck\nThe word/phrase was: " + self.games[ctx.channel].word)
+                        del self.games[ctx.channel]
+            if type(self.games[ctx.channel]) == Math.Math and (msg.isnumeric() or (msg[0] == '-' and (msg[1:].isnumeric()))):
+                if(self.games[ctx.channel].checkAnswer(int(msg))):
+                    await ctx.channel.send(f"Good job! {ctx.author}")
 
     @commands.command(aliases = ["hm"])
     async def hangman(self, ctx):
@@ -35,6 +38,11 @@ class Games(commands.Cog):
         message = await self.client.wait_for('message', check=lambda message: message.author == ctx.author)
         self.games[ctx.channel] = Hangman.Hangman(message.content)
         await ctx.send("Let the evil games begin!\n" + self.games[ctx.channel].returnGuess())
+
+    @commands.command()
+    async def math(self, ctx):
+        self.games[ctx.channel] = Math.Math()
+        await ctx.send(str(self.games[ctx.channel]))
 
     @commands.command(aliases = ["ttt"])
     async def tictactoe(self, ctx):
