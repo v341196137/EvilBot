@@ -4,6 +4,8 @@ The results of playing around with the Discord.py library for a bit of time. A l
 * Moderation bot
 * Host games
 ## TODO
+- [ ] Organize to have a moderation cog instead of jamming everything there
+- [ ] Make math game have 10 rounds or something like that
 - [ ] Learn how to use embeds
 - [ ] Make tic tac toe playable
 - [ ] Make connect 4 playable
