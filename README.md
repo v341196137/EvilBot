@@ -14,8 +14,8 @@ The results of playing around with the Discord.py library for a bit of time. A l
 - [ ] Make connect 4 playable
 - [ ] Make hangman's initiator not able to guess
 - [ ] Learn how to make Evil Bot connect to voice channels to speak of world domination/play music
-- [X] Learn how to use embeds<br>
-~~- [ ] Make math game have 10 rounds or something like that~~
+- [X] Learn how to use embeds
+- [ ] ~~Make math game have 10 rounds or something like that~~
 ## Resources
 * https://www.youtube.com/watch?v=nW8c7vT6Hl4&list=PLW3GfRiBCHOhfVoiDZpSz8SM_HybXRPzZ
 ## Requirements
