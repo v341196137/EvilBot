@@ -49,6 +49,24 @@ class Test(commands.Cog):
         await ctx.send(random.choice(response))
 
     @commands.command()
+    async def embed(self, ctx):
+        embed = discord.Embed(
+            title = "TITLE",
+            description = "some stuff describing yes yes",
+            #colour = discord.Color.red()
+            colour = discord.Color.from_rgb(255, 0, 0)
+
+        )
+        embed.set_footer(text = "footer")
+        embed.set_image(url = "https://d30womf5coomej.cloudfront.net/c/ba/c7fe8419-c2b7-42df-b82c-931e69793eba.jpg")
+        embed.set_thumbnail(url = "https://d30womf5coomej.cloudfront.net/c/ba/c7fe8419-c2b7-42df-b82c-931e69793eba.jpg")
+        embed.set_author(name = "Communist", icon_url = "https://d30womf5coomej.cloudfront.net/ua/fc/79b898b4-823c-41e6-83e8-2c82c983d639.png")
+        embed.add_field(name = "Quarks", value = "strings", inline = False)
+        embed.add_field(name = "Karl", value = "Marx", inline = True)
+        embed.add_field(name = "sandwich", value = "steal", inline = False)
+        await ctx.send(embed = embed)
+    
+    @commands.command()
     async def file(self, ctx):
         file = discord.File("./triANGLES.png",  filename = "triANGLES.png")
         #fix the thing later
