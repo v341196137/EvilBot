@@ -154,33 +154,6 @@ async def ping(ctx):#ctx = context? idk bro
     await ctx.send(f'Pong :P {round(client.latency * 1000)}ms') #sends :P to the channel, latency is how long it takes to send stuff
 
 @client.command()
-@commands.has_permissions(manage_messages = True)#only works when user has permissions
-async def clear(ctx, amount = 2): #clears [amount] messages, will default as 2 when nothing is specified
-    await ctx.channel.purge(limit=amount + 1)#ctx, access channel, purge function, destroys amount
-
-#kick and ban
-@client.command()
-async def kick(ctx, member : discord.Member, *, reason = None):#* is actually really useful wow 
-    await member.kick(reason = reason)
-    await ctx.send(f'Kicked {member.mention}')
-
-@client.command()
-async def ban(ctx, member : discord.Member, *, reason = None):#* is actually really useful wow 
-    await member.ban(reason = reason)
-
-@client.command()
-async def unban(ctx, *, member):
-    banned_users = await ctx.guild.bans()
-    memberName, memberDisc = member.split("#") #get the name and the tag
-
-    for ban_entry in banned_users:
-        user = ban_entry.user
-        if (user.name, user.discriminator) == (memberName, memberDisc):
-            await ctx.guild.unban(user)
-            await ctx.send(f'Unbanned {user.name}#{user.discriminator}')
-            return
-
-@client.command()
 async def greet(ctx, member:discord.Member):
     await ctx.send(f'Hi {member}!')
 
