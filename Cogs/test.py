@@ -68,7 +68,7 @@ class Test(commands.Cog):
     
     @commands.command()
     async def file(self, ctx):
-        file = discord.File("./triANGLES.png",  filename = "triANGLES.png")
+        file = discord.File("./Cogs/triANGLES.png",  filename = "triANGLES.png")
         #fix the thing later
         await ctx.send("triangles", file = file)
         #figure out how to send file from web later
