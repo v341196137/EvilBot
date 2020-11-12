@@ -10,6 +10,8 @@ The results of playing around with the Discord.py library for a bit of time. A l
   * Hangman
   * "Math"
 ## TODO
+- [ ] Make role
+- [ ] Add role
 - [ ] Make tic tac toe playable
 - [ ] Make connect 4 playable
 - [ ] Make hangman's initiator not able to guess
