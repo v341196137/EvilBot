@@ -5,6 +5,7 @@ The results of playing around with the Discord.py library for a bit of time. A l
   * Kick
   * Ban
   * Unban
+  * Clear
 * Host games
   * Hangman
   * "Math"
