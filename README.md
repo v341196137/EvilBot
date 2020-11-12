@@ -9,6 +9,10 @@ The results of playing around with the Discord.py library for a bit of time. A l
 * Host games
   * Hangman
   * "Math"
+* Gambling
+  * Dice
+  * Coin
+  * 8ball
 ## TODO
 - [ ] Make role
 - [ ] Add role
