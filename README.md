@@ -25,6 +25,6 @@ The results of playing around with the Discord.py library for a bit of time. A l
 - [X] Organize to have a moderation cog instead of jamming everything there
 - [ ] ~~Make math game have 10 rounds or something like that~~
 ## Resources
-* https://www.youtube.com/watch?v=nW8c7vT6Hl4&list=PLW3GfRiBCHOhfVoiDZpSz8SM_HybXRPzZ
+* <a href = "https://www.youtube.com/watch?v=nW8c7vT6Hl4&list=PLW3GfRiBCHOhfVoiDZpSz8SM_HybXRPzZ">Tutorial</a>
 ## Requirements
-* Discord.py (mostly sure that's the only library that needs to be installed)
+* <a href = "https://pypi.org/project/discord.py/">Discord.py</a>
