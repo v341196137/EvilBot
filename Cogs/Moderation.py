@@ -38,5 +38,23 @@ class Moderation(commands.Cog):
                 await ctx.send(f'Unbanned {user.name}#{user.discriminator}')
                 return
 
+    #role management
+    @commands.command(aliases = ["mkRole", "createRole"])
+    @commands.has_permissions(manage_roles = True)
+    async def makeRole(self, ctx, name, r = 0, g = 0, b = 0):
+        guild = ctx.guild
+        await guild.create_role(name = name, colour = discord.Colour.from_rgb(r, g, b), mentionable = True)
+        role = discord.utils.get(guild.roles, name = name)
+        if role is not None:
+            await ctx.send(f"{ctx.author.mention} created role {role.mention}")
+        else:
+            await ctx.send("/shrug Some role creation thing went wrong")
+
+    @commands.command(aliases = ["addRole", "giveRole"])
+    @commands.has_permissions(manage_roles = True)
+    async def assignRole(self, ctx, member:discord.Member, role:discord.Role):
+        await member.add_roles(role)
+        await ctx.send(f"{ctx.author.mention} gave {member.mention} a {role.mention} role")
+
 def setup(client):
     client.add_cog(Moderation(client))
