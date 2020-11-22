@@ -2,10 +2,12 @@
 The results of playing around with the Discord.py library for a bit of time. A lot of commented out code probably only exists for reference because looking through the API is tiring. 
 ## Functions
 * Moderation bot
+  * Clear
   * Kick
   * Ban
   * Unban
-  * Clear
+  * Make role
+  * Add role
 * Host games
   * Hangman
   * "Math"
