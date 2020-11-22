@@ -16,13 +16,13 @@ The results of playing around with the Discord.py library for a bit of time. A l
   * Coin
   * 8ball
 ## TODO
-- [ ] Make role
-- [ ] Add role
 - [ ] Make tic tac toe playable
 - [ ] Make connect 4 playable
 - [ ] Make hangman's initiator not able to guess
 - [ ] Learn how to make Evil Bot connect to voice channels to speak of world domination/play music
 - [ ] Make Evil Bot be able to keep track of user scores using csv/json files
+- [X] Add role
+- [X] Make role
 - [X] Learn how to use embeds
 - [X] Organize to have a moderation cog instead of jamming everything there
 - [ ] ~~Make math game have 10 rounds or something like that~~
