@@ -23,7 +23,10 @@ def getPrefix(client, message):#get prefixes from a json file
         return "!"
 
 #--------------------------MAIN-----------------------------------
-client = commands.Bot(command_prefix = getPrefix) # prefix that is used to call bot
+description = "sandwich = tasty"
+intents = discord.Intents.default()
+intents.members = True
+client = commands.Bot(command_prefix = getPrefix, description = description, intents = intents) # prefix that is used to call bot, description is thing before help
 status = cycle([
     'Implementing communism', 
     'Taking over the world >:D', 
