@@ -56,5 +56,11 @@ class Moderation(commands.Cog):
         await member.add_roles(role)
         await ctx.send(f"{ctx.author.mention} gave {member.mention} a {role.mention} role")
 
+    @commands.command(aliases = ["removeRole rmRole"])
+    @commands.has_permissions(manage_roles = True)
+    async def deleteRole(self, ctx, member:discord.Member, role:discord.Role):
+        await member.remove_roles(role)
+        await ctx.send(f"{ctx.author.mention} removed {role.mention} from {member.mention}")
+        
 def setup(client):
     client.add_cog(Moderation(client))
