@@ -6,8 +6,9 @@ The results of playing around with the Discord.py library for a bit of time. A l
   * Kick
   * Ban
   * Unban
-  * Make role
-  * Add role
+  * Make role (in guild)
+  * Add role (to member)
+  * Remove role (from member)
 * Host games
   * Hangman
   * "Math"
