@@ -4,6 +4,7 @@
 # dw
 import discord
 from discord.ext import commands
+from random import randint
 class Moderation(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -41,7 +42,7 @@ class Moderation(commands.Cog):
     #role management
     @commands.command(aliases = ["mkRole", "createRole"])
     @commands.has_permissions(manage_roles = True)
-    async def makeRole(self, ctx, name, r = 0, g = 0, b = 0):
+    async def makeRole(self, ctx, name, r = randint(0, 255), g = randint(0, 255), b = randint(0, 255)):
         guild = ctx.guild
         await guild.create_role(name = name, colour = discord.Colour.from_rgb(r, g, b), mentionable = True)
         role = discord.utils.get(guild.roles, name = name)
